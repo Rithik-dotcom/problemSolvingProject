@@ -1,0 +1,38 @@
+question 1:
+
+
+let comp = [
+['HTML', 'C#'],
+['C#', 'Python'],
+['Python','HTML'],
+]
+
+let res = [0,0, 1]
+
+function findWinner (comp, res) {
+let teams = {}
+for(let i = 0; i < comp. length; i++) {
+if (res [i] == 1) {
+   teams [comp [i] [0]] = teams [comp [i] [0]] + 3 || 3
+ }else {
+   teams [comp [i] [1]] = teams [comp[i] [1]] + 3 || 3
+ }
+}
+console.log(teams)
+
+let max = 0;
+let winnerTeam = ''
+ for(let each of Object.keys(teams) ) {
+if (teams [each] > max) {
+ max = teams[each]
+ winnerTeam = each
+ }
+}
+console.log(winnerTeam)
+
+}
+
+
+findWinner(comp,res)
+
+
