@@ -64,6 +64,33 @@ function subSeq(array,seq){
 console.log(subSeq(array, sequence))
 
 
+question 3
+
+let array = [3, 3, 2, 2, 2, 3, 4, 2];
+let move = 3
+
+function shift(para){
+    for(i=para.length-1; i >=0 ; i--){
+        // console.log(i)
+        if(para[i] !== move  ){
+            // console.log('not a two',para[i])
+           for(j=0; j<para.length; j++){
+            //   console.log('j',j)
+               if(para[j]==move && j<i){
+                  
+                   [para[i],para[j]] = [para[j],para[i]]
+                //   console.log(para)
+                  break;
+               }
+           } 
+        }
+    }
+  return para
+}
+
+console.log(shift(array))
+
+
 
 
 
